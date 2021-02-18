@@ -45,5 +45,6 @@ requirements.copy.txt
 *.tfstate
 *.tfstate.*
 *tfplan
+**tfplan
 
 .python-version

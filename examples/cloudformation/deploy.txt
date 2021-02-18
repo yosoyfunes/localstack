@@ -1,0 +1,7 @@
+aws cloudformation create-stack \
+    --endpoint-url http://localhost:4566 \
+    --stack-name samplestack \
+    --template-body file://s3.yaml \
+    --region us-east-1
+
+aws s3 ls --endpoint-url http://localhost:4566
