@@ -1,0 +1,28 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-eks-cluster
+  region: us-east-1
+
+vpc:
+  id: <VPC_ID>
+  subnets:
+    private:
+      us-east-1a:
+        id: <SUBNET_ID_1>
+      us-east-1b:
+        id: <SUBNET_ID_2>
+
+# nodeGroups:
+#   - name: ng-small
+#     instanceType: t3.small
+#     ami: ami-12345678  # AMI ficticia para LocalStack
+#     amiFamily: AmazonLinux2  # Especifica la familia de la AMI
+#     desiredCapacity: 1
+#     minSize: 1
+#     maxSize: 1
+#     privateNetworking: true
+#     subnets:
+#       - <SUBNET_ID_1>
+#       - <SUBNET_ID_2>
